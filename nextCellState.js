@@ -9,7 +9,9 @@ function nextCellState (cellState, neighbourCount) {
         } else {
             return 1
         }
-    } else if (cellState == 0) {
+    } 
+    
+    if (cellState == 0) {
         if (isRessurectable(neighbourCount)) {
             return 1
         } else {

@@ -5,7 +5,7 @@ function countAliveNeighbours(cellRow, cellColumn, board) {
   let neighbours = getNeighbours(cellRow, cellColumn, board)
 
   for (i = 0; i < neighbours.length; i++) {
-    if (neighbours[i] == true || neighbours[i] === 1) {
+    if (neighbours[i] == 1) {
       count++
     }
   }
