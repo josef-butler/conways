@@ -3,19 +3,17 @@ const indicesAreOutOfBounds = require('./indicesAreOutOfBounds')
 function getNeighbours(cellRow, cellColumn, board) {
   let arr = []
 
-  for (let i = -1; i <= 1; i++) {
-    let cell = []
-
-    for (let j = -1; j <= 1; j++) {
-      // Go around the cell and push any neighbours to an array
-      if(indicesAreOutOfBounds(i, cellColumn + j, board) === false) {
-        // console.log('it is something')
-        cell.push(board[i][cellColumn + j])
+  for (i = -1; i <= 1; i++) {
+    for (j = -1; j <= 1; j++) {
+      if (i === 0 && j === 0) {
+        continue
+      } else {
+        if (indicesAreOutOfBounds(cellRow + i, cellColumn + j, board) == false) {
+          arr.push(board[cellRow + i][cellColumn + j])
+        }
       }
     }
-    arr.push(cell)
   }
-  
   return arr
 }
 
