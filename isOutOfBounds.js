@@ -1,8 +1,8 @@
 function isOutOfBounds(index, array) {
-  if (array[index] == undefined) {
-    return true
-  } else {
+  if (array[index]) {
     return false
+  } else {
+    return true
   }
 }
 

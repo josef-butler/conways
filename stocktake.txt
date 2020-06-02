@@ -1,0 +1,12 @@
+countAliveNeighbours 1dep
+--createBoard
+displayBoard 0dep
+getNeighbours 1dep
+index 3dep
+--indicesAreOutOfBounds 1dep
+--isOutOfBounds
+--isOverPopulated
+--isRessurectable
+--isUnderPopulated
+nextBoard 2dep
+nextCellState 3dep
