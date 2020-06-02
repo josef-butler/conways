@@ -4,7 +4,7 @@ function createBoard (size) {
         let row = []
         for (j = 0; j < size; j++) {
             let randomNumber = Math.random()
-            if (randomNumber < 0.2) {
+            if (randomNumber < 0.3) {
                 row.push(1)
             } else {
                 row.push(0)
