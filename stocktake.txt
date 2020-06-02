@@ -1,4 +1,4 @@
-countAliveNeighbours 1dep
+--countAliveNeighbours 1dep
 --createBoard
 displayBoard 0dep
 --getNeighbours 1dep
@@ -9,4 +9,4 @@ index 3dep
 --isRessurectable
 --isUnderPopulated
 nextBoard 2dep
-nextCellState 3dep
+--nextCellState 3dep
