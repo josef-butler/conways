@@ -6,12 +6,16 @@ function nextBoard (currentBoard) {
     for (k = 0; k < currentBoard.length; k++) {
         let newRow = []
         for (m = 0; m < currentBoard[k].length; m++) {
+            const currentCell = currentBoard[k][m]
+
             aliveNeighbours = countAliveNeighbours(k, m, currentBoard)
-            cellState = nextCellState(currentBoard[k][m], aliveNeighbours)
-            newRow.push(cellState)
+            let newCell = nextCellState(currentCell, aliveNeighbours)
+
+            newRow.push(newCell)
         }
         newBoard.push(newRow)
     }
     return newBoard
 }
+
 module.exports = nextBoard
