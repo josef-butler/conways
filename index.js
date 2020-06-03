@@ -10,7 +10,7 @@ let board = createBoard(size)
 
 function refreshBoard() {
   setTimeout(() => {
-    clear()
+    clear();
     displayBoard(board)
     board = nextBoard(board)
     refreshBoard();

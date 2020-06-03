@@ -10,31 +10,37 @@ test('nextBoard is not equal to createBoard', () => {
 test('nextBoard cell dies from under population', () => {
   const board = createBoard(10)
   board[0][0] = true
+  board[0][1] = false
+  board[1][0] = false
+  board[1][1] = false
   const newBoard = nextBoard(board)
   expect(newBoard[0][0]).toBeFalsy()
 })
 
+//CHECK FROM THIS TEST
 test('nextBoard cells persist', () => {
   const board = createBoard(10)
+  board[0][0] = true
+  board[0][1] = true
+  board[0][2] = true
+  board[1][0] = true
   board[1][1] = true
   board[1][2] = true
-  board[2][1] = true
-  board[2][2] = true
 
   const newBoard = nextBoard(board)
 
-  expect(newBoard[2][2]).toBeTruthy()
-  expect(newBoard[1][1]).toBeTruthy()
-  expect(newBoard[2][1]).toBeTruthy()
-  expect(newBoard[1][2]).toBeTruthy()
+  expect(newBoard[0][0]).toBeTruthy()
 })
 
 test('nextBoard cells become alive', () => {
   const board = createBoard(10)
   board[0][0] = true
-  board[0][1] = true
-  board[1][0] = true
+  board[0][1] = false
+  board[0][2] = true
+  board[1][0] = false
+  board[1][1] = true
+  board[1][2] = false
   const newBoard = nextBoard(board)
 
-  expect(newBoard[1][1]).toBeTruthy()
+  expect(newBoard[0][1]).toBeTruthy()
 })
